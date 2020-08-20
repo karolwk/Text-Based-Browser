@@ -1,0 +1,93 @@
+3.8.5 Documentation
+Navigation
+index
+modules
+Python
+3.8.5 Documentation
+Python 3.8.5 documentation
+Welcome! This is the documentation for Python 3.8.5.
+Parts of the documentation:
+What's new in Python 3.8?
+all "What's new" documents
+Tutorial
+start here
+Library Reference
+keep this under your pillow
+Language Reference
+describes syntax and language elements
+Python Setup and Usage
+how to use Python on different platforms
+Python HOWTOs
+in-depth documents on specific topics
+Installing Python Modules
+installing from the Python Package Index & other sources
+Distributing Python Modules
+publishing modules for installation by others
+Extending and Embedding
+tutorial for C/C++ programmers
+Python/C API
+reference for C/C++ programmers
+FAQs
+frequently asked questions (with answers!)
+Indices and tables:
+Global Module Index
+quick access to all modules
+General Index
+all functions, classes, terms
+Glossary
+the most important terms explained
+Search page
+search this documentation
+Complete Table of Contents
+lists all sections and subsections
+Meta information:
+Reporting bugs
+Reporting bugs
+Contributing to Docs
+Contributing to Docs
+About the documentation
+About the documentation
+History and License of Python
+History and License of Python
+Copyright
+Copyright
+Download
+Download these documents
+Download these documents
+Docs by version
+Python 3.10 (in development)
+Python 3.10 (in development)
+Python 3.9 (pre-release)
+Python 3.9 (pre-release)
+Python 3.8 (stable)
+Python 3.8 (stable)
+Python 3.7 (security-fixes)
+Python 3.7 (security-fixes)
+Python 3.6 (security-fixes)
+Python 3.6 (security-fixes)
+Python 3.5 (security-fixes)
+Python 3.5 (security-fixes)
+Python 2.7 (EOL)
+Python 2.7 (EOL)
+All versions
+All versions
+Other resources
+PEP Index
+PEP Index
+Beginner's Guide
+Beginner's Guide
+Book List
+Book List
+Audio/Visual Talks
+Audio/Visual Talks
+Python Developer’s Guide
+Python Developer’s Guide
+Navigation
+index
+modules
+Python
+3.8.5 Documentation
+Copyright
+Please donate.
+Found a bug
+Sphinx

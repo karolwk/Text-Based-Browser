@@ -1,0 +1,666 @@
+Requests III: HTTP for Humans and Machines, alike. — Requests 2.21.0 documentation
+¶
+Installation
+Installation
+Note
+make a donation
+this programming quiz
+Behold, the power of Requests III:
+>>>
+from
+requests
+import
+HTTPSession
+# Make a connection pool.
+>>>
+http
+=
+HTTPSession
+()
+# Make a request.
+>>>
+r
+=
+http
+.
+request
+(
+'get'
+,
+'https://httpbin.org/ip'
+)
+# View response data.
+>>>
+r
+.
+json
+()
+{'ip': '172.69.48.124'}
+¶
+supporting the development of 3.0
+¶
+Requests III is ready for today’s web.
+Support for H11 & H2 protocols.
+Type-annotations for all public-facing APIs.
+Better defaults; required timeouts.
+async
+await
+asyncio
+Compability with Python 3.6+.
+Requests Classic
+Keep-Alive & Connection Pooling
+International Domains and URLs
+Sessions with Cookie Persistence
+Browser-style SSL Verification
+Automatic Content Decoding
+Basic/Digest Authentication
+Elegant Key/Value Cookies
+Automatic Decompression
+Unicode Response Bodies
+HTTP(S) Proxy Support
+Multipart File Uploads
+Streaming Downloads
+Connection Timeouts
+Chunked Requests
+.netrc
+¶
+This part of the documentation, which is mostly prose, begins with some
+background information about Requests, then focuses on step-by-step
+instructions for getting the most out of Requests.
+Introduction
+Philosophy
+Philosophy
+Apache2 License
+Apache2 License
+Requests License
+Requests License
+Installation of Requests
+$ pipenv install requests
+$ pipenv install requests
+Get the Source Code
+Get the Source Code
+Quickstart
+Make a Request
+Make a Request
+Passing Parameters In URLs
+Passing Parameters In URLs
+Response Content
+Response Content
+Binary Response Content
+Binary Response Content
+JSON Response Content
+JSON Response Content
+Raw Response Content
+Raw Response Content
+Custom Headers
+Custom Headers
+More complicated POST requests
+More complicated POST requests
+POST a Multipart-Encoded File
+POST a Multipart-Encoded File
+Response Status Codes
+Response Status Codes
+Response Headers
+Response Headers
+Cookies
+Cookies
+Redirection and History
+Redirection and History
+Timeouts
+Timeouts
+Errors and Exceptions
+Errors and Exceptions
+Advanced Usage
+Session Objects
+Session Objects
+Request and Response Objects
+Request and Response Objects
+Prepared Requests
+Prepared Requests
+SSL Cert Verification
+SSL Cert Verification
+Client Side Certificates
+Client Side Certificates
+CA Certificates
+CA Certificates
+Body Content Workflow
+Body Content Workflow
+Keep-Alive
+Keep-Alive
+Streaming Uploads
+Streaming Uploads
+Chunk-Encoded Requests
+Chunk-Encoded Requests
+POST Multiple Multipart-Encoded Files
+POST Multiple Multipart-Encoded Files
+Event Hooks
+Event Hooks
+Custom Authentication
+Custom Authentication
+Streaming Requests
+Streaming Requests
+Proxies
+Proxies
+Compliance
+Compliance
+HTTP Verbs
+HTTP Verbs
+Custom Verbs
+Custom Verbs
+Link Headers
+Link Headers
+Transport Adapters
+Transport Adapters
+Blocking Or Non-Blocking?
+Blocking Or Non-Blocking?
+Header Ordering
+Header Ordering
+Timeouts
+Timeouts
+Authentication
+Basic Authentication
+Basic Authentication
+Digest Authentication
+Digest Authentication
+OAuth 1 Authentication
+OAuth 1 Authentication
+OAuth 2 and OpenID Connect Authentication
+OAuth 2 and OpenID Connect Authentication
+Other Authentication
+Other Authentication
+New Forms of Authentication
+New Forms of Authentication
+¶
+This part of the documentation, which is mostly prose, details the
+Requests ecosystem and community.
+Community Sponsors
+Patron Sponsors
+Patron Sponsors
+Major Sponsors
+Major Sponsors
+Individual Sponsors
+Individual Sponsors
+Recommended Packages and Extensions
+Certifi CA Bundle
+Certifi CA Bundle
+CacheControl
+CacheControl
+Requests-Toolbelt
+Requests-Toolbelt
+Requests-Threads
+Requests-Threads
+Requests-OAuthlib
+Requests-OAuthlib
+Betamax
+Betamax
+Frequently Asked Questions
+Encoded Data?
+Encoded Data?
+Custom User-Agents?
+Custom User-Agents?
+Why not Httplib2?
+Why not Httplib2?
+Python 3 Support?
+Python 3 Support?
+What are “hostname doesn’t match” errors?
+What are “hostname doesn’t match” errors?
+Integrations
+Python for iOS
+Python for iOS
+Articles & Talks
+Articles & Talks
+Support
+Stack Overflow
+Stack Overflow
+Send a Tweet
+Send a Tweet
+File an Issue
+File an Issue
+E-mail
+E-mail
+IRC
+IRC
+Vulnerability Disclosure
+Process
+Process
+Previous CVEs
+Previous CVEs
+Community Updates
+GitHub
+GitHub
+Twitter
+Twitter
+Release and Version History
+Release and Version History
+Release History
+dev
+dev
+2.21.0 (2018-12-10)
+2.21.0 (2018-12-10)
+2.20.1 (2018-11-08)
+2.20.1 (2018-11-08)
+2.20.0 (2018-10-18)
+2.20.0 (2018-10-18)
+2.19.1 (2018-06-14)
+2.19.1 (2018-06-14)
+2.19.0 (2018-06-12)
+2.19.0 (2018-06-12)
+2.18.4 (2017-08-15)
+2.18.4 (2017-08-15)
+2.18.3 (2017-08-02)
+2.18.3 (2017-08-02)
+2.18.2 (2017-07-25)
+2.18.2 (2017-07-25)
+2.18.1 (2017-06-14)
+2.18.1 (2017-06-14)
+2.18.0 (2017-06-14)
+2.18.0 (2017-06-14)
+2.17.3 (2017-05-29)
+2.17.3 (2017-05-29)
+2.17.2 (2017-05-29)
+2.17.2 (2017-05-29)
+2.17.1 (2017-05-29)
+2.17.1 (2017-05-29)
+2.17.0 (2017-05-29)
+2.17.0 (2017-05-29)
+2.16.5 (2017-05-28)
+2.16.5 (2017-05-28)
+2.16.4 (2017-05-27)
+2.16.4 (2017-05-27)
+2.16.3 (2017-05-27)
+2.16.3 (2017-05-27)
+2.16.2 (2017-05-27)
+2.16.2 (2017-05-27)
+2.16.1 (2017-05-27)
+2.16.1 (2017-05-27)
+2.16.0 (2017-05-26)
+2.16.0 (2017-05-26)
+2.15.1 (2017-05-26)
+2.15.1 (2017-05-26)
+2.15.0 (2017-05-26)
+2.15.0 (2017-05-26)
+2.14.2 (2017-05-10)
+2.14.2 (2017-05-10)
+2.14.1 (2017-05-09)
+2.14.1 (2017-05-09)
+2.14.0 (2017-05-09)
+2.14.0 (2017-05-09)
+2.13.0 (2017-01-24)
+2.13.0 (2017-01-24)
+2.12.5 (2017-01-18)
+2.12.5 (2017-01-18)
+2.12.4 (2016-12-14)
+2.12.4 (2016-12-14)
+2.12.3 (2016-12-01)
+2.12.3 (2016-12-01)
+2.12.2 (2016-11-30)
+2.12.2 (2016-11-30)
+2.12.1 (2016-11-16)
+2.12.1 (2016-11-16)
+2.12.0 (2016-11-15)
+2.12.0 (2016-11-15)
+2.11.1 (2016-08-17)
+2.11.1 (2016-08-17)
+2.11.0 (2016-08-08)
+2.11.0 (2016-08-08)
+2.10.0 (2016-04-29)
+2.10.0 (2016-04-29)
+2.9.2 (2016-04-29)
+2.9.2 (2016-04-29)
+2.9.1 (2015-12-21)
+2.9.1 (2015-12-21)
+2.9.0 (2015-12-15)
+2.9.0 (2015-12-15)
+2.8.1 (2015-10-13)
+2.8.1 (2015-10-13)
+2.8.0 (2015-10-05)
+2.8.0 (2015-10-05)
+2.7.0 (2015-05-03)
+2.7.0 (2015-05-03)
+2.6.2 (2015-04-23)
+2.6.2 (2015-04-23)
+2.6.1 (2015-04-22)
+2.6.1 (2015-04-22)
+2.6.0 (2015-03-14)
+2.6.0 (2015-03-14)
+2.5.3 (2015-02-24)
+2.5.3 (2015-02-24)
+2.5.2 (2015-02-23)
+2.5.2 (2015-02-23)
+2.5.1 (2014-12-23)
+2.5.1 (2014-12-23)
+2.5.0 (2014-12-01)
+2.5.0 (2014-12-01)
+2.4.3 (2014-10-06)
+2.4.3 (2014-10-06)
+2.4.2 (2014-10-05)
+2.4.2 (2014-10-05)
+2.4.1 (2014-09-09)
+2.4.1 (2014-09-09)
+2.4.0 (2014-08-29)
+2.4.0 (2014-08-29)
+2.3.0 (2014-05-16)
+2.3.0 (2014-05-16)
+2.2.1 (2014-01-23)
+2.2.1 (2014-01-23)
+2.2.0 (2014-01-09)
+2.2.0 (2014-01-09)
+2.1.0 (2013-12-05)
+2.1.0 (2013-12-05)
+2.0.1 (2013-10-24)
+2.0.1 (2013-10-24)
+2.0.0 (2013-09-24)
+2.0.0 (2013-09-24)
+1.2.3 (2013-05-25)
+1.2.3 (2013-05-25)
+1.2.2 (2013-05-23)
+1.2.2 (2013-05-23)
+1.2.1 (2013-05-20)
+1.2.1 (2013-05-20)
+1.2.0 (2013-03-31)
+1.2.0 (2013-03-31)
+1.1.0 (2013-01-10)
+1.1.0 (2013-01-10)
+1.0.3 (2012-12-18)
+1.0.3 (2012-12-18)
+1.0.2 (2012-12-17)
+1.0.2 (2012-12-17)
+1.0.1 (2012-12-17)
+1.0.1 (2012-12-17)
+1.0.0 (2012-12-17)
+1.0.0 (2012-12-17)
+0.14.2 (2012-10-27)
+0.14.2 (2012-10-27)
+0.14.1 (2012-10-01)
+0.14.1 (2012-10-01)
+0.14.0 (2012-09-02)
+0.14.0 (2012-09-02)
+0.13.9 (2012-08-25)
+0.13.9 (2012-08-25)
+0.13.8 (2012-08-21)
+0.13.8 (2012-08-21)
+0.13.7 (2012-08-19)
+0.13.7 (2012-08-19)
+0.13.6 (2012-08-06)
+0.13.6 (2012-08-06)
+0.13.5 (2012-07-27)
+0.13.5 (2012-07-27)
+0.13.4 (2012-07-27)
+0.13.4 (2012-07-27)
+0.13.3 (2012-07-12)
+0.13.3 (2012-07-12)
+0.13.2 (2012-06-28)
+0.13.2 (2012-06-28)
+0.13.1 (2012-06-07)
+0.13.1 (2012-06-07)
+0.13.0 (2012-05-29)
+0.13.0 (2012-05-29)
+0.12.1 (2012-05-08)
+0.12.1 (2012-05-08)
+0.12.0 (2012-05-02)
+0.12.0 (2012-05-02)
+0.11.2 (2012-04-22)
+0.11.2 (2012-04-22)
+0.11.1 (2012-03-30)
+0.11.1 (2012-03-30)
+0.11.0 (2012-03-14)
+0.11.0 (2012-03-14)
+0.10.8 (2012-03-09)
+0.10.8 (2012-03-09)
+0.10.7 (2012-03-07)
+0.10.7 (2012-03-07)
+0.10.6 (2012-02-25)
+0.10.6 (2012-02-25)
+0.10.5 (2012-02-25)
+0.10.5 (2012-02-25)
+0.10.4 (2012-02-20)
+0.10.4 (2012-02-20)
+0.10.3 (2012-02-20)
+0.10.3 (2012-02-20)
+0.10.2 (2012-01-15)
+0.10.2 (2012-01-15)
+0.10.1 (2012-01-23)
+0.10.1 (2012-01-23)
+0.10.0 (2012-01-21)
+0.10.0 (2012-01-21)
+0.9.3 (2012-01-18)
+0.9.3 (2012-01-18)
+0.9.2 (2012-01-18)
+0.9.2 (2012-01-18)
+0.9.1 (2012-01-06)
+0.9.1 (2012-01-06)
+0.9.0 (2011-12-28)
+0.9.0 (2011-12-28)
+0.8.9 (2011-12-28)
+0.8.9 (2011-12-28)
+0.8.8 (2011-12-28)
+0.8.8 (2011-12-28)
+0.8.7 (2011-12-24)
+0.8.7 (2011-12-24)
+0.8.6 (2011-12-18)
+0.8.6 (2011-12-18)
+0.8.5 (2011-12-14)
+0.8.5 (2011-12-14)
+0.8.4 (2011-12-11)
+0.8.4 (2011-12-11)
+0.8.3 (2011-11-27)
+0.8.3 (2011-11-27)
+0.8.2 (2011-11-19)
+0.8.2 (2011-11-19)
+0.8.1 (2011-11-15)
+0.8.1 (2011-11-15)
+0.8.0 (2011-11-13)
+0.8.0 (2011-11-13)
+0.7.6 (2011-11-07)
+0.7.6 (2011-11-07)
+0.7.5 (2011-11-04)
+0.7.5 (2011-11-04)
+0.7.4 (2011-10-26)
+0.7.4 (2011-10-26)
+0.7.3 (2011-10-23)
+0.7.3 (2011-10-23)
+0.7.2 (2011-10-23)
+0.7.2 (2011-10-23)
+0.7.1 (2011-10-23)
+0.7.1 (2011-10-23)
+0.7.0 (2011-10-22)
+0.7.0 (2011-10-22)
+0.6.6 (2011-10-19)
+0.6.6 (2011-10-19)
+0.6.5 (2011-10-18)
+0.6.5 (2011-10-18)
+0.6.4 (2011-10-13)
+0.6.4 (2011-10-13)
+0.6.3 (2011-10-13)
+0.6.3 (2011-10-13)
+0.6.2 (2011-10-09)
+0.6.2 (2011-10-09)
+0.6.1 (2011-08-20)
+0.6.1 (2011-08-20)
+0.6.0 (2011-08-17)
+0.6.0 (2011-08-17)
+0.5.1 (2011-07-23)
+0.5.1 (2011-07-23)
+0.5.0 (2011-06-21)
+0.5.0 (2011-06-21)
+0.4.1 (2011-05-22)
+0.4.1 (2011-05-22)
+0.4.0 (2011-05-15)
+0.4.0 (2011-05-15)
+0.3.4 (2011-05-14)
+0.3.4 (2011-05-14)
+0.3.3 (2011-05-12)
+0.3.3 (2011-05-12)
+0.3.2 (2011-04-15)
+0.3.2 (2011-04-15)
+0.3.1 (2011-04-01)
+0.3.1 (2011-04-01)
+0.3.0 (2011-02-25)
+0.3.0 (2011-02-25)
+0.2.4 (2011-02-19)
+0.2.4 (2011-02-19)
+0.2.3 (2011-02-15)
+0.2.3 (2011-02-15)
+0.2.2 (2011-02-14)
+0.2.2 (2011-02-14)
+0.2.1 (2011-02-14)
+0.2.1 (2011-02-14)
+0.2.0 (2011-02-14)
+0.2.0 (2011-02-14)
+0.0.1 (2011-02-13)
+0.0.1 (2011-02-13)
+Release Process and Rules
+Major Releases
+Major Releases
+Minor Releases
+Minor Releases
+Hotfix Releases
+Hotfix Releases
+Reasoning
+Reasoning
+¶
+If you are looking for information on a specific function, class, or method,
+this part of the documentation is for you.
+Developer Interface
+Main Interface
+Main Interface
+Exceptions
+Exceptions
+Request Sessions
+Request Sessions
+Lower-Level Classes
+Lower-Level Classes
+Lower-Lower-Level Classes
+Lower-Lower-Level Classes
+Authentication
+Authentication
+Encodings
+Encodings
+Cookies
+Cookies
+Status Code Lookup
+Status Code Lookup
+Migrating to 1.x
+Migrating to 1.x
+Migrating to 2.x
+Migrating to 2.x
+¶
+If you want to contribute to the project, this part of the documentation is for
+you.
+Contributor’s Guide
+Be Cordial
+Be Cordial
+Get Early Feedback
+Get Early Feedback
+Contribution Suitability
+Contribution Suitability
+Code Contributions
+Steps for Submitting Code
+Steps for Submitting Code
+Code Review
+Code Review
+New Contributors
+New Contributors
+Kenneth Reitz’s Code Style™
+Kenneth Reitz’s Code Style™
+Documentation Contributions
+Documentation Contributions
+Bug Reports
+Bug Reports
+Feature Requests
+Feature Requests
+Development Philosophy
+Management Style
+Management Style
+Values
+Values
+Semantic Versioning
+Semantic Versioning
+Standard Library?
+Standard Library?
+Linux Distro Packages
+Linux Distro Packages
+How to Help
+Feature Freeze
+Feature Freeze
+Development Dependencies
+Development Dependencies
+Runtime Environments
+Runtime Environments
+Authors
+Keepers of the Crystals
+Keepers of the Crystals
+Previous Keepers of Crystals
+Previous Keepers of Crystals
+Patches and Suggestions
+Patches and Suggestions
+There are no more guides. You are now guideless.
+Good luck.
+Requests is an elegant and simple HTTP library for Python, built for
+  human beings.
+Linode
+other wonderful organizations
+Stay Informed
+Receive updates on new releases and upcoming projects.
+Follow @kennethreitz
+Join Mailing List
+Other Projects
+Kenneth Reitz
+Open DSM-5M
+Open DSM-5M
+Requests-HTML
+Requests-HTML
+howtopython.org
+howtopython.org
+pipenv
+pipenv
+pep8.org
+pep8.org
+httpbin.org
+httpbin.org
+The Python Guide
+The Python Guide
+Maya: Datetimes for Humans
+Maya: Datetimes for Humans
+Records: SQL for Humans
+Records: SQL for Humans
+Legit: Git for Humans
+Legit: Git for Humans
+Tablib: Tabular Datasets
+Tablib: Tabular Datasets
+Useful Links
+Recommended Packages and Extensions
+Recommended Packages and Extensions
+Requests @ GitHub
+Requests @ GitHub
+Requests @ PyPI
+Requests @ PyPI
+Issue Tracker
+Issue Tracker
+Release History
+Release History
+Translations
+English
+English
+French
+French
+German
+German
+Japanese
+Japanese
+Chinese
+Chinese
+Portuguese
+Portuguese
+Italian
+Italian
+Spanish
+Spanish
+#native_title#
+#native_desc#
+#native_cta#
+Quick search
+#native_title#
+#native_desc#
+#native_cta#
+Kenneth Reitz
